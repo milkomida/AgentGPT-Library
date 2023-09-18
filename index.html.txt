@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentGPT - Bibliothèque en ligne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        section {
+            margin-top: 40px;
+        }
+        /* Responsivité */
+        @media (max-width: 768px) {
+            body {
+                margin: 20px;
+            }
+            nav ul {
+                display: block;
+            }
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+        /* Animation fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#source-code"><i class="fas fa-code"></i> Code Source</a></li>
+            <li><a href="#autres"><i class="fas fa-info-circle"></i> Autres</a></li>
+        </ul>
+    </nav>
+
+    <section id="source-code">
+        <h2>Code Source</h2>
+        <p>Le projet AgentGPT prend en charge plusieurs langues. Voici un extrait de code montrant comment les langues disponibles sont définies:</p>
+        <pre><code>
+export const availableLanguages: Language[] = [
+  ENGLISH,
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  ...
+];
+        </code></pre>
+        <p>Pour obtenir une copie du projet AgentGPT et le configurer sur votre machine, suivez les étapes ci-dessous:</p>
+        <pre><code>
+git clone https://github.com/reworkd/AgentGPT.git
+cd AgentGPT
+./setup.sh
+        </code></pre>
+    </section>
+
+    <section id="autres">
+        <h2>Autres</h2>
+        <p>Ressources supplémentaires:</p>
+        <ul>
+            <li><a href="https://docs.reworkd.ai/development/translations"><i class="fas fa-book"></i> Documentation officielle</a></li>
+            <li><a href="https://github.com/reworkd/AgentGPT"><i class="fab fa-github"></i> Répertoire GitHub</a></li>
+        </ul>
+    </section>
+</body>
+</html>
