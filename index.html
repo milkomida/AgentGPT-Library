@@ -4,15 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgentGPT - Bibliothèque en ligne</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/5paNdF+TmFE5o4z4Ck4C2DgHfViXyd" crossorigin="anonymous">
     <style>
-        /* Votre CSS ici */
+        /* ... (style inchangé) ... */
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            let lastScrollTop = 0;
+            let ticking = false;
+
+            function update() {
+                if (window.pageYOffset > 100) {
+                    backToTop.style.display = 'block';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                lastScrollTop = window.scrollY;
+                if (!ticking) {
+                    window.requestAnimationFrame(update);
+                    ticking = true;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <!-- Votre contenu HTML ici -->
+    <nav aria-label="Menu principal">
+        <ul>
+            <li><a href="#source-code" tabindex="0"><i class="fas fa-code"></i> Code Source</a></li>
+            <li><a href="#autres" tabindex="0"><i class="fas fa-info-circle"></i> Autres</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="source-code">
+            <h2>Code Source</h2>
+            <p>Le projet AgentGPT prend en charge plusieurs langues...</p>
+        </section>
+        <section id="autres">
+            <h2>Autres</h2>
+            <p>Ressources supplémentaires...</p>
+        </section>
+    </main>
+    <footer>
+        Pour plus d'informations, contactez-nous à <a href="mailto:info@agentgpt.com" tabindex="0">info@agentgpt.com</a>.
+    </footer>
+    <button class="back-to-top" aria-label="Retour en haut" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" tabindex="0">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
-
-
-
